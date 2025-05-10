@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: gray;
-    color: blue;
+    color: black;
     padding: 10px;
 }
 
@@ -19,4 +19,5 @@ li {
     display: inline-block;
     font-size: 20px;
     padding: 5px;
+    
 }
