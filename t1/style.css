@@ -1,62 +1,63 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
     width: 100%;
-    margin: auto
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    background-color: gray;
-    color: white;
-    padding: 10px;
+    align-items: center;
+    background-color: grey;
+    color: black;
+    padding: 15px 30px;
 }
 
-header li {
+header ul {
+    list-style: none;
+}
+
+header ul li {
     display: inline-block;
-    font-size: 20px;
-    padding: 5px;
+    font-size: 22px;
+    padding: 5px 10px;
 }
 
-header a{
+header ul li a {
     text-decoration: none;
+    color: white;
+}
+header ul li a:hover {
+    text-decoration: underline;
+    color: lightgray;
 }
 
-.row {
+button:hover {
+    background-color: darkblue;
+    cursor: pointer;
+}
+
+.row
+{
     display: flex;
+    padding: 22px;
     justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
 }
-
-.box {
+.box
+{
     width: 500px;
     padding: 30px;
 }
-
-.btn-signup{
-    background-color: peachpuff;
-    margin-top: 10px;
-    padding:7px;
-    font-size: 20px;
-    border-radius: 10px;
-    border:none;
-}
-
-.summary {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.image {
-    border-radius: 50px;
-}
-
-.title {
-    font-size: 30px;
+.title
+{
+    text-align: center;
 }
 #para
 {
@@ -66,13 +67,13 @@ header a{
 button
 {
     padding: 9px;
-    background-color: grey;
-    color: whitesmoke;
+    background-color: whitesmoke;
+    color: grey;
     font-size: 14px;
     border-radius: 4px;
     width: 100px;
 }
-#home 
+#home
 {
     background: linear-gradient(to right, #e3f2fd, #ffffff);
     padding: 40px 0;
@@ -93,27 +94,27 @@ button
     padding: 30px;
     flex-wrap: wrap;
 }
-.boxfirst 
+.boxfirst
 {
-    width: 32%;
-    background-color: peachpuff;
+    width: 27%;
+    background-color: white;
     padding: 30px;
     margin: 20px 0;
     border-radius: 12px;
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+    box-shadow: 0px 6px 15px whitesmoke(0,0,0,0.1);
 }
 .boxfirst:hover
 {
     transform: translateY(-5px);
 }
-.proj 
+.proj
 {
     text-align: center;
     font-size: 32px;
     margin-top: 30px;
-    color: black;
+    color: white;
 }
-#sect 
+#sect
 {
-    background-color: grey;
+    background-color: black;
 }
