@@ -58,3 +58,62 @@ header a{
 .title {
     font-size: 30px;
 }
+#para
+{
+    font-size: 20px;
+    font-weight: 400;
+}
+button
+{
+    padding: 9px;
+    background-color: yellowgreen;
+    color: black;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 100px;
+}
+#home 
+{
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    padding: 40px 0;
+}
+.box img {
+    border-radius: 50px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.proj
+{
+    text-align: center;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.rowfirst {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+.boxfirst 
+{
+    width: 32%;
+    background-color: peachpuff;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+.boxfirst:hover
+{
+    transform: translateY(-5px);
+}
+.proj 
+{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 30px;
+    color: orangered;
+}
+#sect 
+{
+    background-color: grey;
+}
