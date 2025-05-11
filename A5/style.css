@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 50;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background: #62b8da;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    color: #64d491;
+  }
+  /* Tablet */
+  @media (min-width: 600px) {
+    .title {
+      font-size: 2.5rem;
+      color: #a59da6;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 900px) {
+    .title {
+      font-size: 3.5rem;
+      color: #111412;
+    }
+  }
