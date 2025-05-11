@@ -6,18 +6,18 @@ body {
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
-    background: #62b8da;
+    background: #7d85db;
   }
   
   .title {
     font-size: 1.5rem;
-    color: #64d491;
+    color: #6fdcde;
   }
   /* Tablet */
   @media (min-width: 600px) {
     .title {
       font-size: 2.5rem;
-      color: #a59da6;
+      color: #b0b2b4;
     }
   }
   
@@ -25,6 +25,6 @@ body {
   @media (min-width: 900px) {
     .title {
       font-size: 3.5rem;
-      color: #111412;
+      color: #77da8e;
     }
   }
