@@ -76,7 +76,7 @@ button
 }
 #home 
 {
-    background: linear-gradient(to right, #50ac6f, #75bedb);
+    background: linear-gradient(to right, #4ed0c5, #75bedb);
     padding: 40px 0;
 }
 .box img {
@@ -114,14 +114,14 @@ button
     text-align: center;
     font-size: 32px;
     margin-top: 30px;
-    color: #0a0e09;
+    color: #acafac;
 }
 #sect 
 {
-    background-color: #938e93;
+    background-color: #161616;
 }
 #services {
-    background-color: #74eec1;
+    background-color: #151515;
     padding: 40px 20px;
   }
   
@@ -129,7 +129,7 @@ button
     text-align: center;
     font-size: 26px;
     margin-bottom: 30px;
-    color: #191818;
+    color: #bebaba;
   }
   
   .services-container {
@@ -153,7 +153,7 @@ button
     line-height: 2;
   }
   #about {
-    background-color: #e1af30;
+    background-color: #141414;
     padding: 40px 20px;
   }
   
@@ -161,7 +161,7 @@ button
     text-align: center;
     font-size: 26px;
     margin-bottom: 30px;
-    color: #333;
+    color: #afabab;
   }
   
 .skills-container {
@@ -179,11 +179,11 @@ button
   .skills-container ul {
     list-style: square inside;
     font-size: 18px;
-    color: #333;
+    color: #c5c2c2;
     line-height: 2;
   }
   #contact {
-    background-color: #2c2c2c;
+    background-color: #151515;
     padding: 40px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
