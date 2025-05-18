@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+header {
+  background-color: #6c63ff;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.product-box {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 240px;
+  min-width: 220px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.product-box:hover {
+  transform: translateY(-4px);
+}
+
+button {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #574fcf;
+}
+
+footer {
+  text-align: center;
+  background-color: #6c63ff;
+  color: white;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
