@@ -4,64 +4,78 @@ const products = [
   { id: 3, name: "Product 3", price: 75 },
 ];
 
-const cart = {};
+let cart = {};
 
 const addToCart = (id) => {
-  if (!cart[id]) {
-    cart[id] = 1;
+  if (!(id in cart)) {
+    cart = { ...cart, [id]: 1 }; 
   }
-  dispCart();
-};
-
-const increment = (id) => {
-  cart[id] += 1;
-  dispCart();
-};
-
-const decrement = (id) => {
-  if (cart[id] > 1) {
-    cart[id] -= 1;
-  } else {
-    delete cart[id];
-  }
-  dispCart();
+  console.log(cart);
 };
 
 const dispCart = () => {
-  let str = "<h2>Cart</h2>";
-  products.forEach((product) => {
-    if (cart[product.id]) {
-      str += `
-        <div class="cart-item">
-          <strong>${product.name}</strong> - $${product.price}<br/>
-          <button onclick='decrement(${product.id})'>-</button>
-          ${cart[product.id]}
-          <button onclick='increment(${product.id})'>+</button>
-          <br/>Subtotal: $${product.price * cart[product.id]}
+  let str = "";
+  let Totalprice = 0;
+
+  for (let id in cart) {
+    const item = products.find(p => p.id == id);
+    const qty = cart[id];
+    const total = item.price * qty;
+    Totalprice += total;
+
+    str += `
+      <div class="product-box">
+        <h3>${item.name}</h3>
+        <p>Price: $${item.price}</p>
+
+        <div class="qty-controls">
+          <button onclick='decreaseQty(${id})'>−</button>
+          <span>${qty}</span>
+          <button onclick='increaseQty(${id})'>+</button>
         </div>
-      `;
-    }
-  });
 
-  const total = products.reduce(
-    (sum, p) => sum + p.price * (cart[p.id] || 0), 0
-  );
+        <p><strong>Value: $${total}</strong></p>
+      </div>
+    `;
+  }
 
-  str += `<h3>Total: $${total}</h3>`;
-  document.getElementById("root").innerHTML = str;
+  root.innerHTML = str
+  ? `
+    <div class="cart-container">
+      <div class="row">${str}</div>
+      <div class="totalprice-box">
+        <h3>Total order price: $${Totalprice}</h3>
+      </div>
+    </div>
+  `
+  : "<p>Your cart is empty.</p>";
+};
+
+
+
+const increaseQty = (id) => {
+  cart[id] = (cart[id] || 0) + 1;
+  dispCart();
+};
+
+const decreaseQty = (id) => {
+  if (cart[id]) {
+    cart[id]--;
+    if (cart[id] === 0) delete cart[id];
+  }
+  dispCart();
 };
 
 const showProducts = () => {
   let str = "";
-  products.forEach((product) => {
+  products.map(value => {
     str += `
-      <div class="product">
-        <h3>${product.name}</h3>
-        <h4>Price: $${product.price}</h4>
-        <button onclick='addToCart(${product.id})'>Add to Cart</button>
+      <div class="product-box">
+        <h3>${value.name}</h3>
+        <h4>$${value.price}</h4>
+        <button onclick='addToCart(${value.id})'>Add to Cart</button>
       </div>
     `;
   });
-
-  document.getElementById("root").innerHTML = "<div class='row'>" + str + "</div>";
+  root.innerHTML = "<div class='row'>" + str + "</div>";
 };

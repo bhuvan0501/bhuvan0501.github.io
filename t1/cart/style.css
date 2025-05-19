@@ -48,7 +48,7 @@ main {
 }
 
 
-.product-box, .cart-item {
+.product-box {
   background-color: white;
   padding: 1.5rem;
   border-radius: 8px;
@@ -57,12 +57,13 @@ main {
   min-width: 220px;
   text-align: center;
   flex-shrink: 0;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.product-box:hover, .cart-item:hover {
+.product-box:hover {
   transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 
@@ -75,31 +76,55 @@ button {
   margin-top: 1rem;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
   background-color: #574fcf;
+  transform: scale(1.02);
 }
 
 
-.cart-wrapper {
+.qty-controls {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
 }
 
-.cart-item {
-  width: 300px;
-}
-
-.total {
+.qty-controls button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
   font-size: 1.2rem;
-  margin-top: 1.5rem;
+  line-height: 1;
+}
+
+
+.cart-container {
+  width: 100%;
+}
+
+.cart-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+
+.totalprice-box {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.totalprice-box h3 {
+  font-size: 1.3rem;
   color: #6c63ff;
   font-weight: bold;
 }
+
 
 footer {
   text-align: center;
